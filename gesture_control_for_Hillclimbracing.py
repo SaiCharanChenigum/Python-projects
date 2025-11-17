@@ -1,3 +1,49 @@
+# Project: Hand-Gesture Based Game Controller (Hill Climb Racing Game)
+
+# Description:
+# ------------
+# This project implements a real-time hand-gesture recognition system that allows
+# the user to control the "Gas" and "Brake" actions of the game *Hill Climb Racing*
+# without using the keyboard. Both actions are triggered using a simple hand pinch
+# gesture detected via the webcam.
+#
+# How It Works:
+# -------------
+# 1. MediaPipe Hands detects and tracks both hands (left and right) using the webcam.
+# 2. The program checks for a "thumb–index finger pinch" gesture by measuring the
+#    distance between the thumb tip (landmark 4) and the index finger tip (landmark 8).
+# 3. When the gesture is detected:
+#       - Left hand pinch  →  Press 'left arrow' (Brake)
+#       - Right hand pinch →  Press 'right arrow' (Gas)
+# 4. Releasing the gesture automatically releases the respective key.
+# 5. The webcam feed displays real-time hand landmarks for debugging and visualization.
+#
+# Key Features:
+# -------------
+# - Hands-free control for racing games
+# - Real-time gesture tracking using MediaPipe
+# - No additional hardware required — only a webcam
+# - Smooth key simulation using `pyautogui`
+# - Designed for quick demos, CV projects, and interactive game control experiments
+#
+# Technical Highlights:
+# ---------------------
+# - MediaPipe: High-accuracy hand landmark detection
+# - OpenCV: Real-time video capture & frame processing
+# - PyAutoGUI: Simulated keyboard input for game control
+# - Gesture recognition based on landmark distance thresholds
+
+# Controls:
+# ---------
+# - Right hand pinch  → Gas (Right arrow key)
+# - Left hand pinch   → Brake (Left arrow key)
+# - Press 'q' to exit the program
+#
+# Live Demo:
+# ----------
+# A demonstration video of this project is available on my LinkedIn:
+# https://www.linkedin.com/posts/chenigumsaicharan_python-opencv-mediapipe-ugcPost-7374726023625498624-p0I7
+
 print("Script started...")
 import cv2
 import mediapipe as mp
@@ -75,4 +121,3 @@ cap.release()
 cv2.destroyAllWindows()
 print("Program ended.")
 
-#Live demo of this project is shown in this link : https://www.linkedin.com/posts/chenigumsaicharan_python-opencv-mediapipe-ugcPost-7374726023625498624-p0I7?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADz3elUBUzp05GOoTRoquhmOvbwtfkQ9aV0
