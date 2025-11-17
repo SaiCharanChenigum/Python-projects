@@ -74,3 +74,5 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 print("Program ended.")
+
+#Live demo of this project is shown in this link : https://www.linkedin.com/posts/chenigumsaicharan_python-opencv-mediapipe-ugcPost-7374726023625498624-p0I7?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADz3elUBUzp05GOoTRoquhmOvbwtfkQ9aV0
