@@ -1,3 +1,66 @@
+# Project: Voice-Activated Desktop Assistant (Windows Automation)
+
+# NOTE:
+# -----
+# This version of the assistant is configured specifically for *my laptop*.
+# Certain paths, device permissions, and environment settings (such as
+# microphone access, screenshot directory, and Chrome installation path)
+# are tailored to my system. These will need adjustments to run on other
+# computers.
+
+# Description:
+# ------------
+# This project implements a real-time voice-controlled desktop assistant
+# that responds to the hotword "Hello Windows" and performs various system
+# actions using natural voice commands. It enhances hands-free interaction
+# with the computer by integrating speech recognition, automation, and
+# system monitoring features.
+#
+# How It Works:
+# -------------
+# 1. Continuously listens for the activation phrase: "Hello Windows".
+# 2. Once triggered, it enters a 2-minute command session.
+# 3. Recognizes spoken commands using Google Speech Recognition.
+# 4. Executes system actions such as:
+#       - Checking time
+#       - Adjusting brightness
+#       - Taking screenshots
+#       - Locking/shutting down PC
+#       - Switching windows
+#       - Controlling YouTube playback
+#       - Opening applications (Chrome)
+#       - Searching on Google, YouTube, Wikipedia
+# 5. Uses gTTS + pydub for voice responses and activation/deactivation sounds.
+# 6. Runs a background thread to monitor laptop battery and warn when low.
+#
+# Key Features:
+# -------------
+# - Real-time hotword detection ("Hello Windows")
+# - Multiple voice commands for productivity and system control
+# - Background battery monitoring with voice alerts
+# - Non-blocking audio playback for smooth interactions
+# - Uses system automation tools like pyautogui and pygetwindow
+# - 100% hands-free operation
+#
+# Technical Highlights:
+# ---------------------
+# - SpeechRecognition library for voice input
+# - gTTS + pydub for TTS responses and audio effects
+# - pyautogui for keyboard/mouse automation
+# - psutil for battery monitoring
+# - screen_brightness_control for brightness adjustments
+# - Threading for parallel command listening and battery checks
+
+# Use Cases:
+# ----------
+# - Personal desktop automation
+# - Voice-driven productivity workflows
+# - Background monitoring utilities
+# - Demonstration of voice recognition + system control integration
+#
+# Hotword:        "Hello Windows"
+# Exit Method:    Close the program or stop terminal execution
+
 import speech_recognition as sr
 from datetime import datetime
 import threading
